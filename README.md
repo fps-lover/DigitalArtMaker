@@ -1,0 +1,2 @@
+# DigitalArtMaker
+streamlitとchatGPTAPIを用いたアート生成Webアプリ
