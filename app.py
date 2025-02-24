@@ -27,9 +27,9 @@ if st.button("生成する"):
          出力はコード本体のみとし、``` や説明文は含めないでください。
         """
 
-        # 新API での呼び出し: openai.chat_completions.create(...)
+        # API での呼び出し
         response = openai.chat.completions.create(
-            model="gpt-4o",  # 実際に利用可能なモデルを指定
+            model="gpt-4o",  
             messages=[
                 {
                     "role": "system",
@@ -44,7 +44,7 @@ if st.button("生成する"):
         )
 
         # 生成されたスケッチコード（JavaScript部分のみ）
-        # 新APIでは message["content"] のようにアクセス可能
+       
         p5_code = response.choices[0].message.content
 
         # --- 生成されたコードを埋め込み ---
